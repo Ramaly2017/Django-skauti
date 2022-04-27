@@ -7,6 +7,17 @@
     <title>{% block title %}  Aplikace o skautech  {% endblock title %} </title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'uvod' %}">Uvod</a></li>
+            <li><a href="{% url 'clenove' %}">Seznam clenu </a></li>
+        </ul>
+
+
+        <a href=""></a>
+        
+    </nav>
+
     {% block content %}
     <p>Omlouvame se, data nejsou k dispozici...</p>
     {% endblock content %}    

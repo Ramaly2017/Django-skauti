@@ -3,5 +3,13 @@
 {% block title %} Detail clena {% endblock title %}
 
 {% block content %}
-<h1>Detail clena </h1>
+<h1>Detail clena: </h1>
+<p>Jmeno: {{ skaut_v_sablone.jmeno|upper}}.</p>
+<p>Prazdivka: {{ skaut_v_sablone.prezdivka }}.</p>
+<p>Kolik mu je: {{ skaut_v_sablone.vek }}.</p>
+
+<p> {% if skaut_v_sablone.splneno %} Uz splnil zkousku skauta.
+    {% else %} Jeste se musi snazit, aby splnil zkousku. 
+    {% endif %}</p>
+
 {% endblock content %}

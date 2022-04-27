@@ -3,6 +3,17 @@
 {% block title %} Seznam clenu {% endblock title %}
 
 {% block content %}
-<h1>Seznam clenu</h1>
+<h1>Seznam clenu:</h1>
+<ul>
+    {% for skaut in skauti_do_sablony %}
+
+        <li><a href="{% url "detail_clena" skaut.id %}">
+        {{ skaut.jmeno }}</a>
+        {% if skaut.splneno %} splnil zkousku skauta.
+        {% else %} se jeste musi snazit.
+        {% endif %}
+        </li>    
+    {% endfor %}
+</ul>
 {% endblock content %}
 

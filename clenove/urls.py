@@ -4,7 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path("", views.uvod),
-    path("clenove", views.clenove),
-    path("clenove/<int:cislo>", views.detail_clena)
+    path("", views.uvod, name = "uvod"),
+    path("clenove/", views.clenove, name = "clenove"),
+    path("clenove/<int:cislo>", views.detail_clena, name="detail_clena")
 ]
