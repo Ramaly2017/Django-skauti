@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}  Aplikace o skautech  {% endblock title %} </title>
+    <link rel="stylesheet" href="{% static "clenove\styly.css" %} ">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{% url 'uvod' %}">Uvod</a></li>
-            <li><a href="{% url 'clenove' %}">Seznam clenu </a></li>
-        </ul>
-
-
-        <a href=""></a>
-        
-    </nav>
+    {% include "clenove\menu.html" %}
+    
 
     {% block content %}
     <p>Omlouvame se, data nejsou k dispozici...</p>
