@@ -1,0 +1,9 @@
+VZTAHY v DATABAZI
+
+3 typy:
+
+one-to-many (foreign key)
+
+one-to-one 
+
+many-to-many

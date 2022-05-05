@@ -7,7 +7,8 @@
 <ul>
     {% for skaut in skauti_do_sablony %}
 
-        <li><a href="{% url "detail_clena" skaut.id %}">
+        {% comment %} <li><a href="{% url "detail_clena" skaut.id %}"> {% endcomment %}
+        <li><a href="{{ skaut.get_absolute_url}}">     
         {{ skaut.jmeno }}</a>
         {% if skaut.splneno %} splnil zkousku skauta.
         {% else %} se jeste musi snazit.
